@@ -8,7 +8,12 @@ const regex = new RegExp(
 )
 
 //returns the url
-export function isURL(url_str: string): boolean {
-  if (!url_str.match(regex)) ErrorMessage(url_str, 'email')
+/**
+ * Check if value is a valid url
+ * @param value value to check
+ * @returns true iv value is valid
+ */
+export function isURL(value: string): boolean {
+  if (!value.match(regex)) ErrorMessage(value, 'email')
   return true
 }

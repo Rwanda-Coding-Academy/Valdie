@@ -4,7 +4,12 @@ import ErrorMessage from './utils/Error'
 const emailRegex =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
-export function isEmail(str: string): boolean {
-  if (!emailRegex.test(str)) ErrorMessage(str, 'email')
+/**
+ * Check if value is valid email address
+ * @param value value to check
+ * @returns true if value is valid
+ */
+export function isEmail(value: string): boolean {
+  if (!emailRegex.test(value)) ErrorMessage(value, 'email')
   return true
 }
