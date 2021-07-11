@@ -15,6 +15,11 @@ You probably never knew you needed it but here you go.
 ```bash
 npm i valdie
 ```
+or 
+
+```bash
+yarn add valdie
+```
 
 or 
 
@@ -43,7 +48,7 @@ pnpm install valdie
 
 import { isEmail } from "valdie"
 
-console.log(isEmail("test@test.com")) // returns true
+console.log(isEmail("test@test.com")) // true
 ```
 
 ### isInteger
@@ -59,19 +64,28 @@ console.log(isInteger(34)) // returns true
 ### isString
 
 ```javascript
+console.log(isInteger(34)) // true
+```
 
-import { isString } from "valdie"
-
-console.log(isString("My cool string")) // returns true
+**isString**
+```javascript
+console.log(isString("My cool string")) // true
 ```
 
 ### isURL
 
 ```javascript
+console.log(isURL("https://github.com/Rwanda-Coding-Academy/Valdie")) // true
+```
 
-import { isURL } from "valdie"
+**isTel**
+```javascript
+console.log(isTel("+25 078 044 9380") // true
+```
 
-console.log(isURL("https://github.com/Rwanda-Coding-Academy/Valdie")) // returns true
+**isAccepted** : checks whether value is truthfull value , allowed truthful values are `yes`, `on`, `true` and `1`
+```javascript
+console.log(isAccepted("yes") // true
 ```
 
 ## For contributors
